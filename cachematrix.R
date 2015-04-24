@@ -1,10 +1,8 @@
-## Put comments here that give an overall description of what your
-## functions do
 #This cachematrix.R contains 4 functions. 2 functions including makeCacheMatrix
 #and cacheSolve functions are for chached matrix manipulation.  2 functions 
 # including test.1 and test.2 functions are for function evaluations
 
-## Write a short comment describing this function
+
 #makeCacheMatrix create a special "matrix" object that can cache its inverse.
 #input parameters is a matrix which is going to be cached
 #output is the list object where the item is the function 
@@ -28,11 +26,11 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
+
 #cacheSolve will retrieve the inversion of matrix generated from makeCacheMatrix 
 #function. It will check if the inversion matrix exist or  not. If the inversion
-#matrix exist, it will return the inversion matrix. If not, it will calculate 
-#the inversion matrix immediately by using solve function
+#matrix exist, it will return the cached inversion matrix. If not, 
+#it will calculate the inversion matrix immediately by using solve function
 cacheSolve <- function(x, ...) {
   i <- x$get.inverse()
   if(!is.null(i)) {
